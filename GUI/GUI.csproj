@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19ED128D-8508-4348-8324-7B142D8708E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>_240pxBackupIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationInfo.cs" />
+    <Compile Include="BackupCatalog.Dialog\ConfirmationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\ConfirmationDialog.designer.cs">
+      <DependentUpon>ConfirmationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\MessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\MessageDialog.Designer.cs">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\TextInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\TextInputDialog.Designer.cs">
+      <DependentUpon>TextInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog.New\DirectoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.New\DirectoryDialog.Designer.cs">
+      <DependentUpon>DirectoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog.New\FileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.New\FileDialog.Designer.cs">
+      <DependentUpon>FileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog\BackupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog\BackupManager.Designer.cs">
+      <DependentUpon>BackupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog\BackupProfile.cs" />
+    <Compile Include="BackupCatalog\PanelExtensions.cs" />
+    <Compile Include="BackupCatalog\TextAndImageColumn.cs" />
+    <Compile Include="DialogFactory.cs" />
+    <Compile Include="BackupCatalog.New\DirectoryBundleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.New\DirectoryBundleDialog.Designer.cs">
+      <DependentUpon>DirectoryBundleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupCatalog.New\FileBundleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.New\FileBundleDialog.Designer.cs">
+      <DependentUpon>FileBundleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconManager.cs" />
+    <Compile Include="Panel\PathPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\PathPanel.Designer.cs">
+      <DependentUpon>PathPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\TextBoxPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\TextBoxPanel.Designer.cs">
+      <DependentUpon>TextBoxPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="BackupCatalog.Dialog\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\ProgressPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\ProgressPanel.Designer.cs">
+      <DependentUpon>ProgressPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BackupCatalog\ViewHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleProfile.cs" />
+    <Compile Include="BackupCatalog.Dialog\UpdateHistoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupCatalog.Dialog\UpdateHistoryDialog.Designer.cs">
+      <DependentUpon>UpdateHistoryDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BackupCatalog.Dialog\ConfirmationDialog.resx">
+      <DependentUpon>ConfirmationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.Dialog\MessageDialog.resx">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.Dialog\TextInputDialog.resx">
+      <DependentUpon>TextInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.New\DirectoryDialog.resx">
+      <DependentUpon>DirectoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.New\FileBundleDialog.resx">
+      <DependentUpon>FileBundleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.New\FileDialog.resx">
+      <DependentUpon>FileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog\BackupManager.resx">
+      <DependentUpon>BackupManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.New\DirectoryBundleDialog.resx">
+      <DependentUpon>DirectoryBundleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\PathPanel.resx">
+      <DependentUpon>PathPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\TextBoxPanel.resx">
+      <DependentUpon>TextBoxPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.Dialog\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\ProgressPanel.resx">
+      <DependentUpon>ProgressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupCatalog.Dialog\UpdateHistoryDialog.resx">
+      <DependentUpon>UpdateHistoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackupCatalog\BackupCatalog.csproj">
+      <Project>{00666d3e-e37f-44ad-b3cb-f04b5d729e13}</Project>
+      <Name>BackupCatalog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\16px\_16pxAdd.png" />
+    <Content Include="Resources\16px\_16pxCancel.png" />
+    <Content Include="Resources\16px\_16pxCopyItem.png" />
+    <Content Include="Resources\16px\_16pxDeselect.png" />
+    <Content Include="Resources\16px\_16pxEdit.png" />
+    <Content Include="Resources\16px\_16pxPaste.png" />
+    <Content Include="Resources\16px\_16pxRename.png" />
+    <Content Include="Resources\16px\_16pxTrash.png" />
+    <Content Include="Resources\22px\_22pxCalendar.png" />
+    <Content Include="Resources\22px\_22pxDirectory.png" />
+    <Content Include="Resources\22px\_22pxDirectoryBundle.png" />
+    <Content Include="Resources\22px\_22pxDocument.png" />
+    <Content Include="Resources\22px\_22pxDocumentBundle.png" />
+    <Content Include="Resources\22px\_22pxGroup.png" />
+    <Content Include="Resources\64pxIcon\_64pxCalendar.png" />
+    <Content Include="Resources\64pxIcon\_64pxDirectoryBundleIcon.ico" />
+    <Content Include="Resources\64pxIcon\_64pxDirectoryIcon.ico" />
+    <Content Include="Resources\64pxIcon\_64pxDocumentBundleIcon.ico" />
+    <Content Include="Resources\64pxIcon\_64pxDocumentIcon.ico" />
+    <Content Include="Resources\64pxIcon\_64pxGroupIcon.ico" />
+    <Content Include="Resources\64pxIcon\_64pxTrashIcon.ico" />
+    <Content Include="Resources\64px\_64pxDirectory.png" />
+    <Content Include="Resources\64px\_64pxDirectoryBundle.png" />
+    <Content Include="Resources\64px\_64pxDocument.png" />
+    <Content Include="Resources\64px\_64pxDocumentBundle.png" />
+    <Content Include="Resources\64px\_64pxGroup.png" />
+    <Content Include="Resources\64px\_64pxLeftArrow.png" />
+    <Content Include="Resources\64px\_64pxRightArrow.png" />
+    <Content Include="Resources\64px\_64pxTextBlock.png" />
+    <Content Include="Resources\64px\_64pxTrash.png" />
+    <Content Include="Resources\Misc\Refresh.png" />
+    <Content Include="_240pxBackupIcon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
